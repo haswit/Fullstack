@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Todo List</title>
+
+    <style>
+        section{
+            border: 1px solid gray;   
+
+        }
+
+        input{
+            padding: 10px;
+            margin-top: 20px;
+            margin-left: 20px;
+            border: 1px solid blue;
+            width: 73%;
+        }
+
+        button{
+            padding: 10px;
+            width: 100px;
+            background-color: rgba(0, 0, 255, 0.651);
+            color: white;
+            border: none;
+        }
+
+        button:hover{
+            box-shadow: 1px 2px 5px gray;
+        }
+
+        ul{
+            margin: 0;
+            margin-top: 15px;
+            padding: 10px;
+        }
+
+
+        li{
+            border: 1px solid gray;
+            list-style-type: none;
+            margin-bottom: 20px;
+            padding: 5px;
+            box-shadow: 2px 1px 10px rgba(75, 21, 21, 0.322);
+        }
+
+    </style>
+
+    
+
+</head>
+
+<body>
+    <nav>
+
+    </nav>
+
+    <section>
+
+        <!-- User input -->
+        <div>
+            <input id="user_input" placeholder="Enter Todo">
+            <button onclick="add_item()">Add</button>
+        </div>
+        <!-- user input end -->
+
+
+        <!-- todo list items -->
+        <div>
+            <ul id="todo_items">
+                
+            </ul>
+
+        </div>
+
+
+
+
+    </section>
+
+    <aside>
+
+
+    </aside>
+    <footer>
+
+    </footer>
+
+    <script>
+
+        
+        function add_item(){
+            var todo = document.getElementById("user_input").value;
+            
+            document.getElementById("todo_items").innerHTML += `<li>${todo}</li>`;              
+
+            document.getElementById("user_input").value = "";
+
+        }
+
+        //document.getElementById("todo_items").innerHTML = "<li>" + todo +"</li>";
+
+
+        
+
+
+
+
+
+
+
+        //let todo_list_item = "todo 1";
+        
+        //todo_list_item = "todo 2";
+
+        //console.log(todo_list_item)
+
+
+        //const USER_ID = "todo";
+        
+
+
+
+
+        
+        //console.log(todo)
+
+    </script>
+
+</body>
+</html>
